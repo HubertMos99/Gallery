@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "6842f452ba73d9d979b947f9"
+  },
+  "name": "Samochody",
+  "description": "fajne auta (updated)",
+  "date": {
+    "$date": "2025-06-06T13:59:46.656Z"
+  },
+  "user": {
+    "$oid": "683f795ba935681971362687"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842f5c130f0ff8c62efc748"
+  },
+  "name": "Samoloty",
+  "description": "fajne samoloty",
+  "date": {
+    "$date": "2025-06-06T14:05:53.545Z"
+  },
+  "user": {
+    "$oid": "6842f59830f0ff8c62efc740"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68431374732afcdfe76927f2"
+  },
+  "name": "Kwiatki",
+  "description": "ładne kwiatki",
+  "date": {
+    "$date": "2025-06-06T16:12:36.596Z"
+  },
+  "user": {
+    "$oid": "6842f59830f0ff8c62efc740"
+  },
+  "__v": 0
+}]

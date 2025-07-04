@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  if gallery_list.length
+    each gallery in gallery_list
+      ul
+        li #{gallery.name}; #{gallery.description}; #{gallery.date}; #{gallery.user.surname}
+  else
+    p There are no any galleries.

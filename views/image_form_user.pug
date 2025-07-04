@@ -1,0 +1,30 @@
+extends layout
+block content
+  h1=title
+
+  form(method='POST', enctype='multipart/form-data')
+    div.form-group
+      label(for='i_name') Image name:
+      input#i_name.form-control(type='text', name='i_name', required value=(image ? image.name : ''))
+
+      label(for='i_description') Description:
+      input#i_description.form-control(type='text', name='i_description', value=(image ? image.description : ''))
+
+      label(for='i_path') Select file:
+      input#i_path.form-control(type='file', name='i_path', required)
+
+      label(for='i_gallery') Gallery:
+      select#i_gallery.form-control(name='i_gallery', required)
+        option(value='') --Select a gallery--
+        each g in galleries
+          if image && g._id.toString() === image.gallery.toString()
+            option(value=g._id selected)= g.name
+          else
+            option(value=g._id)= g.name
+
+    button.btn.btn-primary(type='submit') Submit
+
+  if messages
+    ul
+      each message in messages
+        li= message

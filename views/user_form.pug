@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST')
+    div.form-group
+      label(for='name') Name:
+      input#name.form-control(type='text', placeholder='min. 2 litery' name='name' required value=(undefined===user ? '' : user.name) )
+      label(for='surname') Surname:
+      input#surname.form-control(type='text', placeholder='min. 2 litery' name='surname' required value=(undefined===user ? '' : user.surname))
+      label(for='username') Username:
+      input#username.form-control(type='text', placeholder='min. 3 litery' name='username' required value=(undefined===user ? '' : user.username))
+      label(for='password') Password:
+      input#password.form-control(type='password', minlength="8", placeholder='min. 8 litery', name='password', autocomplete='off', required value='' )
+    button.btn.btn-primary(type='submit') Submit
+
+  if messages
+    ul
+      for message in messages
+        li!= message

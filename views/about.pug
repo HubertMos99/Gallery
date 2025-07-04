@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  h1 Gallery App — Dokumentacja
+
+  h2 Autor - Hubert Moś
+
+  h3 Cel aplikacji
+  p Aplikacja pozwala użytkownikom na tworzenie galerii obrazków, zarządzanie nimi oraz komentowanie obrazków innych użytkowników.
+
+  h3 Funkcjonalności
+  ul
+    li Dodawanie użytkowników
+    li Logowanie i wylogowanie użytkowników
+    li Dodawanie, edycja i usuwanie galerii (własnych)
+    li Dodawanie, edycja i usuwanie obrazków (własnych)
+    li Przeglądanie galerii innych użytkowników
+    li Komentarze do obrazków (tylko po zalogowaniu)
+    li Interfejs zabezpieczony autoryzacją
+    li Obsługa przesyłania i wyświetlania plików graficznych
+
+  h3 Wykorzystane technologie
+  ul
+    li Node.js + Express
+    li MongoDB + Mongoose
+    li Pug (jako silnik widoków)
+    li Multer (upload plików)
+    li Bootstrap (opcjonalnie)
+
+  h3 Struktura kolekcji (modele)
+  ul
+    li User: name, surname, username, password
+    li Gallery: name, description, user, date
+    li Image: name, description, path, gallery
+    li Comment: content, author, image, date
+
+  h3 Ścieżki (przykłady)
+  ul
+    li GET /galleries — lista galerii
+    li GET /galleries/gallery_add — formularz dodania galerii
+    li POST /images/image_add — dodanie obrazka
+    li GET /images/image_show?image_id=... — podgląd obrazka
+    li POST /images/image_comment/:image_id — dodanie komentarza
+
+  h3 Instrukcja uruchomienia
+  ol
+    li Zainstaluj zależności: <code>npm install</code>
+    li Uruchom MongoDB lokalnie (domyślnie na <code>mongodb://localhost:27017/gallery</code>)
+    li Uruchom serwer: <code>npm start</code> lub <code>node ./bin/www</code>
+    li Wejdź na <code>http://localhost:3000</code>
+
+  a.btn.btn-secondary.mt-4(href='javascript:history.back()') Back

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST')
+    div.form-group
+      label(for='i_name') Name:
+      input#i_name.form-control(type='text', name='i_name', required value=image.name)
+
+      label(for='i_description') Description:
+      input#i_description.form-control(type='text', name='i_description', value=image.description)
+
+      label(for='i_gallery') Gallery:
+      select#i_gallery.form-control(name='i_gallery')
+        each g in galleries
+          if g._id.toString() === image.gallery._id.toString()
+            option(value=g._id selected)= g.name
+          else
+            option(value=g._id)= g.name
+
+    button.btn.btn-primary(type='submit') Submit
+
+  if messages
+    ul
+      for message in messages
+        li= message

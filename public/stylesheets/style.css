@@ -1,0 +1,29 @@
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  min-height: 100vh;
+  background-color: #343a40;
+  color: white;
+}
+
+.sidebar .nav-link {
+  color: #ccc;
+  padding: 8px 16px;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff;
+  background-color: #495057;
+}
+
+.btn-primary {
+  background-color: #546ab7;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4257a5;
+}

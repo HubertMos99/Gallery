@@ -1,0 +1,5 @@
+Dokumentacja - podstrona HTML w aplikacji
+
+Upewnij się, że MongoDB działa lokalnie pod: mongodb://localhost:27017
+
+Pliki .json znajdują się w katalogu /data

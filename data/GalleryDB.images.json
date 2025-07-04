@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "685836a439e654a595fdb4ba"
+  },
+  "name": "Samolot 1",
+  "description": "taki o samolocik (updated)",
+  "path": "1750611620129.jpg",
+  "gallery": {
+    "$oid": "6842f5c130f0ff8c62efc748"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858427ab2e9b8f6ff4c0c39"
+  },
+  "name": "Kwiatek 1",
+  "description": "różowy kwiatek, całkiem fajny",
+  "path": "1750614650536.avif",
+  "gallery": {
+    "$oid": "68431374732afcdfe76927f2"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858471a54c1a1a3701304b7"
+  },
+  "name": "Chevrolet",
+  "description": "szybki",
+  "path": "1750615834812.png",
+  "gallery": {
+    "$oid": "6842f452ba73d9d979b947f9"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68587049a5ed82b421fbe3db"
+  },
+  "name": "Mały fiat",
+  "description": "czerwony maluch",
+  "path": "1750626377048.jpg",
+  "gallery": {
+    "$oid": "6842f452ba73d9d979b947f9"
+  },
+  "__v": 0
+}]

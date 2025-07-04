@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    h1=title
+
+    form(method='POST')
+        div.form-group
+            label(for='i_name') Image Name:
+            input#i_name.form-control(type='text', placeholder='min. 2 litery' name='i_name' required value=(undefined===image ? '' : image.name))
+            label(for='i_description') Description:
+            input#i_description.form-control(type='text', placeholder='min. 2 litery' name='i_description' required value=(undefined===image ? '' : image.description))
+            label(for='i_path') Select file:
+            input#i_path.form-control(type='file', placeholder='min. 3 litery' name='i_path' required value="")
+            label(for='i_gallery') Select gallery:
+            // lista rozwijana wyboru galerii
+            select#i_gallery.form-control(name='i_gallery' required)
+                option(value='') --Select a gallery--
+                for gallery in galleries
+                    if image
+                        if gallery._id.toString()===image.gallery._id.toString()
+                            option(value=gallery._id selected) #{gallery.name}
+                        else
+                            option(value=gallery._id) #{gallery.name}
+                    else
+                        option(value=gallery._id) #{gallery.name}
+
+        button.btn.btn-primary(type='submit') Submit
+
+    if messages
+        ul
+            for message in messages
+                li!= message

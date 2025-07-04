@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "683f795ba935681971362687"
+  },
+  "name": "admin",
+  "surname": "admin",
+  "username": "admin",
+  "password": "$2b$10$CcSwdKJsSQa.e3PtwlxQw.rURWIGme1Da6347LbIqUKErAAeLGfXS",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842f59830f0ff8c62efc740"
+  },
+  "name": "jan",
+  "surname": "kowalski",
+  "username": "jkowalski",
+  "password": "$2b$10$FuAvDCUlPe6QFK8wwqSiwu8sTIzs5KBZS9IwLEZyoyIX/2ngOVwS6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685877bdc4f4fa24097bdc58"
+  },
+  "name": "radek",
+  "surname": "radecki",
+  "username": "radek",
+  "password": "$2b$10$e94YjZZi3mIVgValeulfvO84ZFCkSRVhhuc6mwzqOt3WB0wLYzM1S",
+  "__v": 0
+}]

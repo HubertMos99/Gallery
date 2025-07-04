@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST', enctype='multipart/form-data')
+    .mb-3
+      label.form-label(for='g_name') Gallery name:
+      input#g_name.form-control(type='text', name='g_name', required value=(gallery ? gallery.name : ''))
+
+    .mb-3
+      label.form-label(for='g_description') Description:
+      input#g_description.form-control(type='text', name='g_description', required value=(gallery ? gallery.description : ''))
+
+    if all_users
+      .mb-3
+        label.form-label(for='g_user') Owner:
+        select#g_user.form-control(name='g_user')
+          option(value='') --Select user--
+          for u in all_users
+            if gallery && gallery.user && u._id.toString() === gallery.user.toString()
+              option(value=u._id selected)= `${u.name} ${u.surname}`
+            else
+              option(value=u._id)= `${u.name} ${u.surname}`
+
+    button.btn.btn-primary(type='submit') Submit
+
+    a.btn.btn-secondary.ms-2(href='javascript:history.back()') Back
+
+    if messages
+      ul.mt-3
+        for message in messages
+          li.text-danger= message
+

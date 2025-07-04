@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  if image_list.length
+    each image in image_list
+      ul
+        li #{image.name}; #{image.description}; #{image.path}; #{image.gallery.name}
+  else
+    p There are no any images.

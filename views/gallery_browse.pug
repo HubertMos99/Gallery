@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    h1=title
+
+    form(method='POST')
+        div.form-group
+            label(for='s_gallery') Select gallery:
+            //- lista rozwijana wyboru galerii
+            select#s_gallery.form-control(name='s_gallery' required)
+                for gallery in galleries
+                    if (sel_gallery == gallery._id)
+                        option(value=gallery._id selected) #{gallery.name}
+                    else
+                        option(value=gallery._id) #{gallery.name}
+        button.btn.btn-primary(type='submit') Submit
+    if images
+      .row
+        each image in images
+          .col-md-4.mb-4
+            .card.shadow-sm
+              img.card-img-top(src=`/images/${image.path}`, alt=image.name, style='height: 200px; object-fit: cover;')
+              .card-body
+                h5.card-title= image.name
+                p.card-text Description: #{image.description}
+                a.btn.btn-info.btn-sm(href='/images/image_show?image_id=' + image._id) Show
+                a.btn.btn-warning.btn-sm.ms-2(href='/images/image_update?image_id=' + image._id) Update
+                form(action="/images/image_delete/" + image._id, method="POST", style="display:inline")
+                  button.btn.btn-danger.btn-sm.ms-2(type='submit') Delete
+
+    else
+        p There are no any images.
+    if messages
+        ul
+            for message in messages
+                li!= message

@@ -1,0 +1,47 @@
+doctype html
+html(lang='pl-PL')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    // Bootstrap + custom CSS
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .container-fluid
+      .row
+        // Sidebar
+        .col-md-2.sidebar.bg-dark.text-light.pt-4
+          h4.text-white.mb-4 Gallery
+          nav.nav.flex-column
+            a.nav-link(href='/') Home
+            a.nav-link(href='/stats') Stats
+            a.nav-link(href='/users') Users
+            a.nav-link(href='/galleries') Galleries
+            a.nav-link(href='/images') Images
+            a.nav-link(href='/galleries/gallery_browse') Browse gallery
+            hr
+            a.nav-link(href='/users/user_add') Add user
+            a.nav-link(href='/galleries/gallery_add') Add gallery
+            a.nav-link(href='/images/image_add') Add image
+            hr
+            if loggedUser
+              span.text-light.ps-2 Logged in as #{loggedUser}
+              a.nav-link(href='/users/user_logout') Logout
+            else
+              a.nav-link(href='/users/user_login') Login
+            hr
+            hr
+            hr
+            a.nav-link(href='/about') Dokumentacja
+
+        // Main content
+        .col-md-10.p-4
+          .d-flex.justify-content-end.mb-3
+            if loggedUser
+              span.me-3.text-secondary Hello #{loggedUser}
+              a.btn.btn-outline-primary(href='/users/user_logout') Logout
+            else
+              a.btn.btn-outline-primary(href='/users/user_login') Login
+          block content

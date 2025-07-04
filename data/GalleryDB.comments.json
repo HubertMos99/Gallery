@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "6858774dc4f4fa24097bdc1d"
+  },
+  "content": "Rzeczywiście czerwony",
+  "author": {
+    "$oid": "6842f59830f0ff8c62efc740"
+  },
+  "image": {
+    "$oid": "68587049a5ed82b421fbe3db"
+  },
+  "date": {
+    "$date": "2025-06-22T21:36:13.078Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858775fc4f4fa24097bdc2a"
+  },
+  "content": "Leciałem kiedyś",
+  "author": {
+    "$oid": "6842f59830f0ff8c62efc740"
+  },
+  "image": {
+    "$oid": "685836a439e654a595fdb4ba"
+  },
+  "date": {
+    "$date": "2025-06-22T21:36:31.580Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68587769c4f4fa24097bdc37"
+  },
+  "content": "fajny",
+  "author": {
+    "$oid": "6842f59830f0ff8c62efc740"
+  },
+  "image": {
+    "$oid": "6858427ab2e9b8f6ff4c0c39"
+  },
+  "date": {
+    "$date": "2025-06-22T21:36:41.924Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68587788c4f4fa24097bdc45"
+  },
+  "content": "Ale fura",
+  "author": {
+    "$oid": "683f795ba935681971362687"
+  },
+  "image": {
+    "$oid": "6858471a54c1a1a3701304b7"
+  },
+  "date": {
+    "$date": "2025-06-22T21:37:12.777Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68587795c4f4fa24097bdc53"
+  },
+  "content": "10/10",
+  "author": {
+    "$oid": "683f795ba935681971362687"
+  },
+  "image": {
+    "$oid": "68587049a5ed82b421fbe3db"
+  },
+  "date": {
+    "$date": "2025-06-22T21:37:25.928Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685877d7c4f4fa24097bdc66"
+  },
+  "content": "dziwny",
+  "author": {
+    "$oid": "685877bdc4f4fa24097bdc58"
+  },
+  "image": {
+    "$oid": "6858427ab2e9b8f6ff4c0c39"
+  },
+  "date": {
+    "$date": "2025-06-22T21:38:31.994Z"
+  },
+  "__v": 0
+}]
